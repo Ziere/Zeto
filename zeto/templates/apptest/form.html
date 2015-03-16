@@ -1,0 +1,28 @@
+{% load staticfiles %}
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static "bootstrap/dist/css/bootstrap.css" %}">
+</head>
+<body ng-app="{% block ng_app %}example.app.basic{% endblock %}">
+<div class="content" ng-controller="{% block ng_controller %}AppController{% endblock %}">{% block content %}
+{% verbatim %}
+    <div class="panel" ng-repeat="customer in customers">
+        <div class="panel-heading clearfix">
+            <h3 class="panel-title">User: {{ customer.name }}</h3>
+            </br>
+            <p class="well">
+            Email address: {{ customer.email_address }}
+            </br>
+            Phone number: {{ customer.phone_number }}
+            </p>
+        </div>
+    </div>
+{% endverbatim %}
+{% endblock %}</div>
+<script src="{% static "underscore/underscore.js" %}"></script>
+<script src="{% static "angular/angular.js" %}"></script>
+<script src="{% static "angular-resource/angular-resource.js" %}"></script>
+<script src="{% static "js/script.js" %}"></script>
+</body>
+</html>
