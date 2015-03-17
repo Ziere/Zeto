@@ -13,6 +13,8 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^customerList/', views.CustomerListView, name='CustomerListView'),
+    url(r'^createCustomer/', views.CreateCustomerView, name='CreateCustomerView'),
+    url(r'^createCustomer/create_customer/$', 'create_customer'),
     url(r'^', include(router.urls)),
     url(r'^api/', include(
                                 'rest_framework.urls',
