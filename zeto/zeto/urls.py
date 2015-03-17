@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^form/', views.FormView, name='FormView'),
+    url(r'^customerList/', views.CustomerListView, name='CustomerListView'),
     url(r'^', include(router.urls)),
     url(r'^api/', include(
                                 'rest_framework.urls',

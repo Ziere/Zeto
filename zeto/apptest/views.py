@@ -22,6 +22,6 @@ class CustomerViewSet(viewsets.ModelViewSet):
     serializer_class = CustomerSerializer
 
 
-def FormView(request):
+def CustomerListView(request):
     context = RequestContext(request)
-    return render_to_response('apptest/form.html', context)
+    return render_to_response('apptest/customerList.html', context)
