@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='customer',
             name='email_address',
-            field=models.CharField(max_length=100),
+            field=models.EmailField(max_length=100),
             preserve_default=True,
         ),
     ]
