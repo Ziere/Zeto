@@ -25,12 +25,11 @@
     - Create the Rest Api for the Customer model
     - Visualization of customers list
     - Use a long polling and 2 way data binding in the customers list
+    - Create a custom migration 0003_customer_address.py for the apptest
 
 ## TODO List
     - Form with Ajax and validation
     - Create the button in the Customers lists to check or uncheck the Vip Status
-    - Add the property address to the model
-    - Do a data migration
     - Do UNIT tests
 
 
@@ -41,3 +40,4 @@
 
     - API via browser 'localhost:8000/customer/'
     - Check the user list using Angular 'localhost:8000/customerList/'
+    - Form create Customer 'localhost:8000/createCustomer/'
