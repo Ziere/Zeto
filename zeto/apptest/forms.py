@@ -5,6 +5,9 @@ from models import Customer
 
 
 class CustomerForm(forms.ModelForm):
+    '''
+    Customer form with the fields name, email and phone from the model Customer
+    '''
     class Meta:
         model = Customer
         # exclude = ['vip_customer']

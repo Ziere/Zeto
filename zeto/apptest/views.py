@@ -3,9 +3,7 @@ import json
 from django.shortcuts import render
 from django.template import RequestContext
 from django.shortcuts import render_to_response
-from django.http import HttpResponseBadRequest
 from django.http import HttpResponse
-from django.core.mail import mail_admins
 
 from apptest.models import Customer
 from apptest.forms import CustomerForm
@@ -24,6 +22,9 @@ class CustomerViewSet(viewsets.ModelViewSet):
 
 
 def CustomerListView(request):
+    """
+    CustomerList that allows users to be viewed the list of users.
+    """
     context = RequestContext(request)
     return render_to_response('apptest/customerList.html', context)
 
